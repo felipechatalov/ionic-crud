@@ -1,0 +1,23 @@
+.wrapper{
+    width: 250px;
+
+    .title{
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .last-name{
+        font-weight: 300;
+        font-size: 1.5rem;
+    }
+
+    .email-label{
+        font-weight: 300;
+        font: 1.5rem;
+    }
+
+    .email{
+        font-weight: 500;
+        font: 1rem;
+    }
+}
