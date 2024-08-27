@@ -1,0 +1,11 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Usuários</ion-title>
+    <div class="column">
+      <div class="row wrap gap-1 space-between">
+          <app-user *ngFor="let user of users" [user]="user"></app-user>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+

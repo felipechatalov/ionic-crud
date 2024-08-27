@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title class="mid-title">Escreva o email do cadastro</ion-title>
+      <ion-input class="mt-15 full-center"></ion-input>
+      <ion-button (click)="searchBtnClickFunction()">Procurar</ion-button>
+      
+      @if(searched && !noMatch){
+        <ion-list>
+          <ion-item> 
+            <ion-input label="Nome" [disabled]="true" value="{{ getResponse.firstName }}"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-input label="Sobrenome" [disabled]="true" value="{{ getResponse.lastName }}"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-input label="Email" [disabled]="true" value="{{ getResponse.email }}"></ion-input>
+          </ion-item>
+          <ion-item> 
+            <ion-input label="Senha" [disabled]="true" value="{{ getResponse.password }}"></ion-input>
+          </ion-item>
+        </ion-list>
+      }
+      @if(noMatch){
+        <ion-title>Nenhum cadastro encontrado</ion-title>
+      }
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
